@@ -21,4 +21,18 @@ export const notes = async (req, res) => {
     console.log(error);
   }
 };
-export default notes;
+
+export const user = async (req, res) => {
+  try {
+    res.status(200).send({
+      success: true,
+      message: "Notes fetched successfully",
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send({
+      message: "Error in fetching notes",
+    });
+  }
+};
+export default { notes, user };
