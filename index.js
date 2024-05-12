@@ -19,5 +19,5 @@ app.get("/", (req, res) => {
   res.send("hello world");
 });
 
-app.use("/api/user", nameRoute);
+app.use("/api/category", nameRoute);
 app.listen(PORT, () => console.log(`server is connected ${PORT}`));

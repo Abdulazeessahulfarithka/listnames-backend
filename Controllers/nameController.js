@@ -24,9 +24,11 @@ export const notes = async (req, res) => {
 
 export const user = async (req, res) => {
   try {
+    const notes = await nameModel.find();
     res.status(200).send({
       success: true,
       message: "Notes fetched successfully",
+      notes,
     });
   } catch (error) {
     console.log(error);
